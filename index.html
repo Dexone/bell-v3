@@ -11,46 +11,43 @@
 
     <div style="margin-left: auto; margin-right: auto; width: 300px; padding-top: 50px;"><audio id="audio"
             src="https://dexone.github.io/test/music/0.mp3" controls></audio>
-            v3
     </div>
+
     <script>
 
-
-
-        setInterval(date, 60000)
-
-        let int
         const audio = document.getElementById("audio")
+        audio.addEventListener("ended", function () {
+            setInterval(date, 60000)
+        }, { once: true });
+
+
         function date() {
             const date = new Date()
             const hours = date.getHours()
             const minutes = date.getMinutes()
             let time = hours + "" + minutes
-            if (time === "1032" || time === "1038" || time === "1055") {
+            if (time === "145" || time === "1415" || time === "1425") {
+                audio.removeEventListener("ended", peremena);
                 audio.volume = 1
                 audio.src = "https://dexone.github.io/test/music/0.mp3";
                 audio.play()
-                clearInterval(int)
             }
-            else if (time === "1036" || time === "1043" || time === "1140") {
+            else if (time === "1410" || time === "1420" || time === "1430") {
                 audio.volume = 1
                 audio.src = "https://dexone.github.io/test/music/0.mp3";
                 audio.play()
-                int = setInterval(currentTime, 5000)
+                audio.addEventListener("ended", peremena);
             }
 
         }
 
-        function currentTime() {
-            console.log("currenttime")
-            var x = document.getElementById("audio").ended
-            if (x === true) {
-                let random = Math.floor(Math.random() * (100 - 1 + 1)) + 1
-                audio.volume = 0.05
-                audio.src = "https://dexone.github.io/test/music/" + random + ".mp3"
-                audio.play()
-            }
+        function peremena() {
+            audio.volume = 0.05
+            let random = Math.floor(Math.random() * (100 - 1 + 1)) + 1
+            audio.src = "https://dexone.github.io/test/music/" + random + ".mp3"
+            audio.play()
         }
+
 
     </script>
 </body>
