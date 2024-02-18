@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="margin-left: auto; margin-right: auto; width: 300px; padding-top: 50px;"><audio id="audio"
+        src="https://dexone.github.io/test/music/0.mp3" controls></audio>
+</div>
+<script>
+
+
+
+    setInterval(date, 60000)
+
+    let int
+    const audio = document.getElementById("audio")
+    function date() {
+        const date = new Date()
+        const hours = date.getHours()
+        const minutes = date.getMinutes()
+        let time = hours + "" + minutes
+        if (time === "855" || time === "950" || time === "1055") {
+            audio.volume = 1
+            audio.src = "https://dexone.github.io/test/music/0.mp3";
+            audio.play()
+            clearInterval(int)
+        }
+        else
+            if (time === "940" || time === "1035" || time === "1140") {
+                audio.volume = 1
+                audio.src = "https://dexone.github.io/test/music/0.mp3";
+                audio.play()
+                int = setInterval(currentTime, 5000)
+            }
+
+    }
+
+    function currentTime() {
+        console.log("currenttime")
+        var x = document.getElementById("audio").ended
+        if (x === true) {
+            let random = Math.floor(Math.random() * (100 - 1 + 1)) + 1
+            audio.volume = 0.05
+            audio.src = "https://dexone.github.io/test/music/" + random + ".mp3"
+            audio.play()
+        }
+    }
+
+</script>
+</body>
+</html>
