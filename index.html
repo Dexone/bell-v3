@@ -4,39 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>bell-v-3</title>
 </head>
 
 <body>
+    <audio id="audio" src="https://dexone.github.io/test/music/0.mp3"></audio>
 
-    <div style="margin-left: auto; margin-right: auto; width: 300px; padding-top: 50px;"><audio id="audio"
-            src="https://dexone.github.io/test/music/0.mp3" controls></audio>
-    </div>
+
+    <div style="max-width: 300px; margin: auto;"><button style="width: 300px; height: 150px;"
+            onclick="audio.play(), setInterval(date, 60000)">Play</button></div>
+
 
     <script>
-
-        const audio = document.getElementById("audio")
-        audio.addEventListener("ended", function () {
-            setInterval(date, 60000)
-        }, { once: true });
-
-
         function date() {
             const date = new Date()
             const hours = date.getHours()
             const minutes = date.getMinutes()
             let time = hours + "" + minutes
-            if (time === "855" || time === "950" || time === "1055") {
+            if (time === "60" || time === "70" || time === "80" || time === "90" || time === "100" || time === "110" || time === "120" || time === "130" || time === "140" || time === "150" || time === "160" || time === "170" || time === "180" || time === "190" || time === "200" || time === "210" || time === "220" || time === "230" || time === "00" || time === "10" || time === "20" || time === "30" || time === "40" || time === "50") {
                 audio.removeEventListener("ended", peremena);
                 audio.volume = 1
                 audio.src = "https://dexone.github.io/test/music/0.mp3";
                 audio.play()
+                document.title = 'УРОК';
             }
-            else if (time === "940" || time === "1035" || time === "1140") {
+            else if (time === "645" || time === "745" || time === "845" || time === "945" || time === "1045" || time === "1145" || time === "1245" || time === "1345" || time === "1445" || time === "1545" || time === "1645" || time === "1745" || time === "1845" || time === "1945" || time === "2045" || time === "2145" || time === "2245" || time === "2345" || time === "045" || time === "145" || time === "245" || time === "345" || time === "445" || time === "545") {
                 audio.volume = 1
                 audio.src = "https://dexone.github.io/test/music/0.mp3";
                 audio.play()
                 audio.addEventListener("ended", peremena);
+                document.title = 'ПЕРЕМЕНА';
             }
 
         }
