@@ -21,14 +21,16 @@
             const hours = date.getHours()
             const minutes = date.getMinutes()
             let time = hours + "" + minutes
-            if (time === "60" || time === "70" || time === "80" || time === "90" || time === "100" || time === "110" || time === "120" || time === "130" || time === "140" || time === "150" || time === "160" || time === "170" || time === "180" || time === "190" || time === "200" || time === "210" || time === "220" || time === "230" || time === "00" || time === "10" || time === "20" || time === "30" || time === "40" || time === "50") {
+            // if (time === "60" || time === "70" || time === "80" || time === "90" || time === "100" || time === "110" || time === "120" || time === "130" || time === "140" || time === "150" || time === "160" || time === "170" || time === "180" || time === "190" || time === "200" || time === "210" || time === "220" || time === "230" || time === "00" || time === "10" || time === "20" || time === "30" || time === "40" || time === "50") {
+            if (time === "955" || time === "1045" || time === "1140" || time === "1230") {
                 audio.removeEventListener("ended", peremena);
                 audio.volume = 1
                 audio.src = "https://dexone.github.io/test/music/0.mp3";
                 audio.play()
                 document.title = 'УРОК';
             }
-            else if (time === "645" || time === "745" || time === "845" || time === "945" || time === "1045" || time === "1145" || time === "1245" || time === "1345" || time === "1445" || time === "1545" || time === "1645" || time === "1745" || time === "1845" || time === "1945" || time === "2045" || time === "2145" || time === "2245" || time === "2345" || time === "045" || time === "145" || time === "245" || time === "345" || time === "445" || time === "545") {
+            // else if (time === "645" || time === "745" || time === "845" || time === "945" || time === "1045" || time === "1145" || time === "1245" || time === "1345" || time === "1445" || time === "1545" || time === "1645" || time === "1745" || time === "1845" || time === "1945" || time === "2045" || time === "2145" || time === "2245" || time === "2345" || time === "045" || time === "145" || time === "245" || time === "345" || time === "445" || time === "545") {
+            else if (time === "1040" || time === "1130" || time === "1225" || time === "1315") {
                 audio.volume = 1
                 audio.src = "https://dexone.github.io/test/music/0.mp3";
                 audio.play()
