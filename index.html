@@ -23,7 +23,7 @@
             const hours = date.getHours()
             const minutes = date.getMinutes()
             let time = hours + "" + minutes
-            if (onoff === false && time === "855" || time === "950" || time === "1055") {
+            if (onoff === false && time === "80" || time === "855" || time === "950"|| time === "1055"|| time === "120") {
                 onoff = true
                 setTimeout(() => {
                     onoff = false
@@ -34,7 +34,7 @@
                 audio.play()
                 document.title = 'УРОК';
             }
-            else if (onoff === false && time === "940" || time === "1035" || time === "1140") {
+            else if (onoff === false && time === "845" || time === "940" || time === "1035" || time === "1140" || time === "1245") {
                 onoff = true
                 setTimeout(() => {
                     onoff = false
