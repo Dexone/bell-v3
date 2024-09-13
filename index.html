@@ -9,10 +9,10 @@
 
 <body>
     <audio id="audio" src="https://dexone.github.io/test/music/0.mp3"></audio>
-kol
+volume
 
     <div style="max-width: 300px; margin: auto;"><button style="width: 300px; height: 150px;"
-            onclick="audio.play(), setInterval(date, 60000)">Play</button></div>
+            onclick="audio.play(), setInterval(date, 60000), audio.volume = 1">Play</button></div>
 
     <script>
         let onoff = false
@@ -27,7 +27,7 @@ kol
                     onoff = false
                 }, 60000);
                 audio.removeEventListener("ended", peremena);
-                audio.volume = 1
+
                 audio.src = "https://dexone.github.io/test/music/0.mp3";
                 audio.play()
                 document.title = 'УРОК';
@@ -37,7 +37,6 @@ kol
                 setTimeout(() => {
                     onoff = false
                 }, 60000);
-                audio.volume = 1
                 audio.src = "https://dexone.github.io/test/music/0.mp3";
                 audio.play()
                 audio.addEventListener("ended", peremena);
@@ -46,7 +45,6 @@ kol
         }
 
         function peremena() {
-            audio.volume = 0.05
             let random = Math.floor(Math.random() * (100 - 1 + 1)) + 1
             audio.src = "https://dexone.github.io/test/music/" + random + ".mp3"
             audio.play()
